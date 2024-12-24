@@ -1,0 +1,152 @@
+.flex-container {
+  box-sizing: border-box;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 24px;
+}
+
+.text-field {
+  grid-column: 2 / span 1;
+  height: 90vh;
+  position: relative;
+  /* background-color: #ffffff; */
+}
+
+.setting-panel {
+  grid-column: 3 / span 1;
+  grid-row: 1;
+}
+
+::ng-deep .mdc-text-field--filled {
+  border-radius: 8px !important;
+}
+
+textarea,
+#text-area {
+  height: 85vh !important;
+  overflow-y: auto;
+}
+
+.text-field pre {
+  scrollbar-width: none;
+}
+
+.text-field pre::-webkit-scrollbar {
+  display: none;
+}
+
+::ng-deep
+  .mdc-text-field--no-label:not(.mdc-text-field--textarea)
+  .mat-mdc-form-field-input-control.mdc-text-field__input,
+.mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
+  color: transparent !important;
+}
+
+#text-area {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  white-space: break-spaces;
+  word-wrap: break-word;
+  width: -webkit-fill-available;
+}
+
+pre {
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+  z-index: -1;
+}
+
+svg:hover {
+  cursor: pointer;
+}
+
+.setting-panel > svg {
+  border-radius: 0 8px 8px 0;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 12px #1c2a500f;
+}
+
+svg {
+  max-width: 24px;
+  max-height: 24px;
+  stroke: #1b1f26b8;
+  padding: 16px 24px;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  box-shadow: 0px 2px 12px #1c2a500f;
+  background-color: #ffffff !important;
+}
+
+::ng-deep .mdc-line-ripple::before,
+::ng-deep .mdc-line-ripple::after {
+  border-bottom-color: transparent !important;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none !important;
+}
+
+.control-panel {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  height: 90vh;
+}
+
+.form-field-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.replace-btns {
+  margin: 0 12px;
+}
+
+button {
+  font-weight: 400;
+}
+
+::ng-deep .mat-mdc-button:not(:disabled) {
+  color: #007aff !important;
+}
+
+button:hover {
+  background-color: white;
+}
+
+.find-text,
+.replace-with {
+  width: 85%;
+  border: 2px solid #d4d4d4;
+  border-radius: 8px !important;
+}
+
+.replace-with {
+  margin-top: 12px;
+}
+
+.find-text-btns > p {
+  margin: 0 !important;
+}
+
+.find-text-btns > svg {
+  max-width: 18px;
+  max-height: 1rem;
+  padding: 0;
+  margin: 4px;
+}
+
+.find-text-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding: 0 24px;
+}

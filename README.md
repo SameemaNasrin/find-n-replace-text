@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+Design a simple Find and Replace Tool
+Create a webpage with a text input area where users can paste or type any text. Provide functionality to find a specific word or phrase and replace it with another word or phrase. Make any assumptions or improvisations as you see fit, and mention those in your project Readme.md file.
