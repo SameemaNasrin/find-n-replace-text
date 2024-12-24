@@ -1,32 +1,84 @@
-# FindNReplaceTool
+# Find and Replace Tool
+(Site is live at `https://sameemanasrin.github.io/find-n-replace-text/`)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+## Overview
+This project is a simple web-based Find and Replace Tool that allows users to:
+- Enter or paste text in a text area.
+- Find specific words or phrases within the text.
+- Highlight all occurrences of the search term.
+- Navigate between the found occurrences.
+- Replace a specific occurrence or all occurrences of the search term with a new phrase.
 
-## Development server
+## Features
+- **Text Input**: A text area where users can input or paste text.
+- **Find Functionality**: Highlights all occurrences of the entered search term.
+- **Replace Functionality**: Replace one or all occurrences of the found term with the desired text.
+- **Navigation**: Navigate to the previous or next occurrence of the found term.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Assumptions and Improvements
+- **Text Highlighting**: The search term is highlighted using the `<mark>` tag.
+- **Case Insensitivity**: The search functionality is case-insensitive.
+- **No Overlapping Matches**: The tool assumes non-overlapping matches for the search term.
+- **Simultaneous Scrolling**: The text area and its preview (`<pre>` element) scroll in sync for better usability.
+- **Styling**: Basic styling applied for better user experience.
 
-## Code scaffolding
+## Prerequisites
+- Node.js and npm installed (for serving the project locally).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Steps to Run the Project Locally
 
-## Build
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/SameemaNasrin/find-n-replace-text.git
+    cd find-n-replace-tool
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Install Dependencies**:
+    If using Angular or a similar framework, run:
+    ```bash
+    npm install
+    ```
 
-## Running unit tests
+3. **Start the Development Server**:
+    ```bash
+    ng serve
+    ```
+    OR
+   ```bash
+    npm start
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. **Access the Application**:
+    Open a browser and go to `http://localhost:4200` (or the port shown in your terminal).
 
-## Running end-to-end tests
+   
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+6. **Use the Tool**:
+    - Type or paste text in the text area.
+    - Enter the search term in the "Find" input field.
+    - Enter the replacement text in the "Replace" input field.
+    - Use the navigation buttons to move between occurrences.
+    - Click "Replace" or "Replace All" as needed.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-
-
-Design a simple Find and Replace Tool
-Create a webpage with a text input area where users can paste or type any text. Provide functionality to find a specific word or phrase and replace it with another word or phrase. Make any assumptions or improvisations as you see fit, and mention those in your project Readme.md file.
+## Project Structure
+```
+find-n-replace-tool/
+│
+├── src/
+│   ├── app/
+│   │   ├── components/
+|   |   |   └── home-page
+|   |   |       └──home-page.component.html
+|   |   |       └──home-page.component.css
+|   |   |       └──home-page.component.ts
+│   │   └── app.component.css
+│   │   └── app.component.html
+│   │   └── app.component.ts
+│   ├── assets/
+│   └── index.html
+│   └── style.css
+├── README.md
+├── angular.json
+├── package.json
+└── tsconfig.json
+```
