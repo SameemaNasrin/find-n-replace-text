@@ -82,7 +82,8 @@ export class HomePageComponent implements OnInit {
       this.foundTextCount = (
         this.textField.match(new RegExp(this.findTextControl.value, 'ig')) || []
       ).length;
-      if (!this.currentMatchIndex) this.currentMatchIndex = 1;
+      if (!this.currentMatchIndex && this.foundTextCount)
+        this.currentMatchIndex = 1;
       else {
         this.currentMatchIndex =
           (this.currentMatchIndex + this.foundTextCount) % this.foundTextCount;
@@ -173,7 +174,6 @@ export class HomePageComponent implements OnInit {
       behavior: 'smooth',
       block: 'center',
     });
-
     matches.forEach((match, index) => {
       if (index === this.currentMatchIndex - 1) {
         match.style.backgroundColor = 'orange';

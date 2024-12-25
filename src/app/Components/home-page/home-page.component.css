@@ -22,16 +22,22 @@
   border-radius: 8px !important;
 }
 
+textarea {
+  resize: none;
+}
+
 textarea,
 #text-area {
   height: 85vh !important;
   overflow-y: auto;
 }
 
-.text-field pre {
+.text-field pre,
+.text-field textarea {
   scrollbar-width: none;
 }
 
+.text-field textarea::-webkit-scrollbar,
 .text-field pre::-webkit-scrollbar {
   display: none;
 }
@@ -41,6 +47,7 @@ textarea,
   .mat-mdc-form-field-input-control.mdc-text-field__input,
 .mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
   color: transparent !important;
+  width: 99.7% !important;
 }
 
 #text-area {
@@ -49,7 +56,7 @@ textarea,
   left: 0px;
   white-space: break-spaces;
   word-wrap: break-word;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 pre {
@@ -165,8 +172,17 @@ button:hover {
     grid-column: 1 / span 1;
   }
 
-  
-.control-panel {
+  .control-panel {
     height: fit-content;
+  }
+
+  .find-text,
+  .replace-with {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  form {
+    width: 100% !important;
   }
 }
